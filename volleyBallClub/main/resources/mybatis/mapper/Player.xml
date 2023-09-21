@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<!-- namespace : mapper가 어떤 인터페이스와 관련된 것인지 명시 -->	
+<mapper namespace="com.ex.springboot.model.Player_DAO">
+	<!-- select 태그의 id는 Player_DAO 생성한 메소드명 -->
+	<select id="playerList1" resultType="com.ex.springboot.model.Player_DTO">
+		select * from volleyball_player where idx between 0 and 5
+	</select>
+	<select id="playerList2" resultType="com.ex.springboot.model.Player_DTO">
+		select * from volleyball_player where idx between 6 and 11
+	</select>
+	<select id="playerList3" resultType="com.ex.springboot.model.Player_DTO">
+		select * from volleyball_player where idx between 12 and 17
+	</select>
+	<select id="playerList4" resultType="com.ex.springboot.model.Player_DTO">
+		select * from volleyball_player where idx between 18 and 23
+	</select>
+</mapper>	

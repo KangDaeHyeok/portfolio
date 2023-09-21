@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<!-- namespace : mapper가 어떤 인터페이스와 관련된 것인지 명시 -->	
+<mapper namespace="com.ex.springboot.model.Reply_DAO">
+
+	<!-- ***** 댓글 리스트 ***** -->
+	<select id="selectReplyList" parameterType="long" resultType="com.ex.springboot.model.Reply_DTO">
+		select * from volleyball_reply where b_idx = #{b_idx}
+	</select>
+	
+	<!-- ***** 댓글 작성 ***** -->
+	<insert id="writeReply" parameterType="com.ex.springboot.model.Reply_DTO">
+		insert into volleyball_reply values(seq_reply.nextval, #{b_idx}, #{id}, #{title},
+			#{content}, #{writer}, sysdate)
+	</insert>
+		
+	<!-- ***** 댓글 수정 ***** -->
+	<update id="updateReply" parameterType="com.ex.springboot.model.Reply_DTO">
+		update volleyball_reply set
+			title = #{title},
+			content = #{content}
+		where idx = #{idx}
+	</update>
+	
+	<!-- ***** 댓글 삭제 ***** -->
+	<delete id="deleteReply" parameterType="com.ex.springboot.model.Reply_DTO">
+		delete from volleyball_reply where idx = #{idx}
+	</delete>
+</mapper>	
+
+
+
+
+
+
+

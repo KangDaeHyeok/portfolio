@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+	
+<!-- namespace : mapper가 어떤 인터페이스와 관련된 것인지 명시 -->	
+<mapper namespace="com.ex.springboot.model.Board_DAO">
+	<!-- ***** 게시물 조회수 ***** -->
+	<update id="countBoard" parameterType="com.ex.springboot.model.Board_DTO">
+		update volleyball_board set 
+			count = count + 1
+		where idx = #{idx}
+	</update>
+
+
+	<!-- ***** 게시물 수정 ***** -->
+	<update id="updateBoard" parameterType="com.ex.springboot.model.Board_DTO">
+		update volleyball_board set 
+			title = #{title},
+			content = #{content},
+			writer = #{writer},
+			count = #{count},
+			notice = #{notice},
+			secret = #{secret},
+			secret_num = #{secret_num}
+		where idx = #{idx}
+	</update>
+
+
+	<!-- ***** 게시물 삭제 ***** -->
+	<delete id="deleteBoard" parameterType="com.ex.springboot.model.Board_DTO">
+		delete volleyball_board where idx = #{idx}
+	</delete>
+	
+	
+	<!-- ***** 게시물 작성 ***** -->
+	<insert id="insertBoard" parameterType="com.ex.springboot.model.Board_DTO">
+		insert into volleyball_board values 
+		(	(SELECT NVL(MAX(idx), 0) + 1 FROM volleyball_board)
+			, #{title}
+			, #{content}
+			, #{id}
+			, #{writer}
+			, default
+			, #{notice}
+			, #{secret}
+			, #{secret_num}
+			, default
+		)
+	</insert>
+
+
+	<!-- ***** 공지 게시글 ***** -->
+	<select id="selectBoardNotice" resultType="com.ex.springboot.model.Board_DTO">
+		select * from volleyball_board where notice = 1 order by idx desc
+	</select>
+
+
+	
+	<!-- ***** 게시물 리스트 + 검색 ***** -->
+	<select id="searchBoardList" parameterType="Map" resultType="com.ex.springboot.model.Board_DTO">
+			SELECT * FROM volleyball_board 
+			where notice = 0 
+			
+			<if test='searchType.equals("title")'>
+				and title like '%'||#{keyword}||'%'
+			</if>
+			
+			<if test='searchType.equals("content")'>
+				and content like '%'||#{keyword}||'%'
+			</if>
+			
+			<if test='searchType.equals("total")'>
+				and title like '%'||#{keyword}||'%' or content like '%'||#{keyword}||'%' or writer like '%'||#{keyword}||'%'
+			</if>
+			
+			<if test='searchType.equals("writer")'>
+				and writer like '%'||#{keyword}||'%'
+			</if>
+			
+			ORDER BY idx desc
+			
+			OFFSET #{displayPost} ROWS FETCH NEXT #{postNum} ROWS ONLY
+	</select>
+	
+	
+	<!-- ***** 게시물 갯수 ***** -->
+	<select id="selectBoardCount" parameterType="Map" resultType="int">
+		SELECT COUNT(*) FROM volleyball_board
+		
+		<if test='searchType.equals("title")'>
+			where title like '%'||#{keyword}||'%'
+		</if>
+		
+		<if test='searchType.equals("content")'>
+			where content like '%'||#{keyword}||'%'
+		</if>
+		
+		<if test='searchType.equals("total")'>
+			where title like '%'||#{keyword}||'%' or content like '%'||#{keyword}||'%' or writer like '%'||#{keyword}||'%'
+		</if>
+		
+		<if test='searchType.equals("writer")'>
+			where writer like '%'||#{keyword}||'%'
+		</if>
+	</select>
+	
+	
+	<!-- ***** 게시글 상세보기 ***** -->
+	<select id="selectContent" parameterType="com.ex.springboot.model.Board_DTO" resultType="com.ex.springboot.model.Board_DTO">
+	    select * from volleyball_board where idx = #{idx}
+	</select>
+</mapper>	
+
+
+
+
+
+
+
