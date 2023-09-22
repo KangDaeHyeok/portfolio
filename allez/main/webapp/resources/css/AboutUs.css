@@ -1,0 +1,256 @@
+
+body {
+	background-color: #f6f2ed;
+	/* 배경색 후보 background-color: #eef8fd;	 */
+}
+
+ul li, ol li {
+	list-style: none;
+}
+
+/*------영상 위에 얹은 네비게이션 바------*/
+.nav {
+	position: absolute;
+	top: 3%;
+	margin-left: 4%;
+	z-index: 9999;
+}
+
+.nav li a {
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.nav li a img {
+	width: 80px;
+	height: 50px;
+}
+
+/*-------중앙 로고(홈 버튼)----------*/
+.logo {
+	position: absolute;
+	top: 3%;
+	margin-left: 50%;
+	z-index: 9999;
+}
+
+.logo img {
+	width: 4.5em;
+	height: 2.5em;
+}
+
+/*------우측 상단 로그인 & 게시판 버튼------*/
+.login {
+	position: absolute;
+	top: 3%;
+	right: 4%;
+	z-index: 9999;
+}
+
+.login li {
+	text-decoration: none;
+	list-style: none;
+	float: left;
+}
+
+.login li a {
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.dropdown-menu {
+	position: relative;
+	top: 72px;
+	background-color: #323233;
+}
+
+.dropdown-menu a {
+	font-size: 17px !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+	background-color: transparent;
+	color: gold;
+}
+
+.dropdown-item {
+	color: white;
+}
+
+/* ----- 모바일 네비 ------ */
+.mobileNav {
+	display: none;
+}
+
+.card-img-overlay {
+	margin-top: 25%;
+}
+
+.cs_img {
+	position: relative;
+	top: -50px;
+}
+
+/*두번째 페이지*/
+.second img {
+	width: 85%;
+	height: 100%;
+	margin-left: 7%;
+}
+
+.second-body {
+	text-align: center;
+}
+
+.second-body h2 {
+	/* font-weight: ; */
+	
+}
+
+/*세번째 페이지*/
+.third-title {
+	text-align: center;
+}
+
+.third-title h5 {
+	color: black;
+	font-weight: normal;
+}
+
+.third {
+	width: 100%;
+	height: 900px;
+	background: url(../images/aboutUs/127398770zbqv.jpg);
+	background-repeat: no-repeat;
+	background-size: cover; /* 요소를 비율에 맞게 커버 */
+	background-position: center; /* 이미지를 요소의 정가운데로 처리 */
+	background-attachment: fixed; /* 스크롤바 움직일때 이미지가 따라다님 */
+}
+
+.animate__animated.animate__fadeInUp {
+	--animate-duration: 10s;
+}
+
+.animate__animated.animate__fadeInDown {
+	--animate-duration: 10s;
+}
+
+.third-body h2, .third-body h3, .third-body h5 {
+	color: white !important;
+}
+
+.parallax-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-family: Montserrat, sans-serif;
+	color: white;
+	min-height: 27vh;
+	width: 100%;
+}
+
+.parallax-item h3 a {
+	font-size: 2rem;
+	color: white;
+	text-transform: uppercase;
+	padding: 1rem;
+	border-radius: 1rem;
+	text-decoration: none !important;
+}
+
+.parallax-item:nth-child(1) {
+	background: url("../images/aboutUs/01-cortina-640x412.jpg");
+	background-position: center;
+}
+
+.parallax-item:nth-child(2) {
+	background:
+		url("../images/aboutUs/our-inspiration-our-instrument-lg.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+.parallax-item:nth-child(3) {
+	background: url("../images/aboutUs/palisade_space_front_overview.png");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	min-height: 27vh;
+}
+
+.parallax-item:nth-child(4) {
+	background: url("../images/aboutUs/speedometer-3725405_1920.jpg");
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+#map {
+	width: 70%;
+	height: 800px;
+	left: 15%;
+}
+
+@media screen and (max-width: 1360px) {
+	#map {
+		width: 80%;
+		height: 600px;
+		left: 10%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	#map {
+		width: 80%;
+		height: 400px;
+		left: 10%;
+	}
+}
+
+/*타블렛 & 스마트폰용*/
+@media screen and (max-width: 950px) {
+	.nav, .login, .logo {
+		display: none;
+	}
+
+	/* ----- 모바일 네비 ------ */
+	.mobileNav {
+		display: block;
+		position: absolute;
+		top: 3%;
+		width: 100%;
+		z-index: 9999;
+	}
+	.mobileNav .btn_ham {
+		position: absolute;
+		right: 3%;
+		z-index: 9999;
+	}
+	.navbar-light .navbar-toggler {
+		background-color: white;
+	}
+	.mobileNav .navbar-nav li a {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.navbar-light .navbar-nav .nav-link {
+		color: white;
+	}
+	.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover
+		{
+		color: gold;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.parallax-item h2 {
+		font-size: 1.5rem;
+	}
+	
+	.cs_img{
+		height: 500px;
+	}
+}

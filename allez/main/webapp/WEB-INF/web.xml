@@ -1,0 +1,61 @@
+<web-app>
+    <servlet>
+		<servlet-name>MemberController</servlet-name>
+		<servlet-class>mvc.controller.MemberController</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>MemberController</servlet-name>
+		<url-pattern>*.do</url-pattern>
+	</servlet-mapping>
+   
+  	<servlet>
+ 		<servlet-name>BoardController</servlet-name>
+ 		<servlet-class>mvc.controller.BoardController</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>BoardController</servlet-name>
+ 		<url-pattern>*.bo</url-pattern> <!-- 주소창의 경로가 *.bo이면 BoardController 클래스를 실행 -->
+ 	</servlet-mapping>
+ 	
+ 	<servlet>
+ 		<servlet-name>AdminController</servlet-name>
+ 		<servlet-class>mvc.controller.AdminController</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>AdminController</servlet-name>
+ 		<url-pattern>*.ad</url-pattern> <!-- 주소창의 경로가 *.bo이면 BoardController 클래스를 실행 -->
+ 	</servlet-mapping>
+    
+    <servlet>
+ 		<servlet-name>CalendarController</servlet-name>
+ 		<servlet-class>mvc.controller.CalendarController</servlet-class>
+ 	</servlet>
+ 	<servlet-mapping>
+ 		<servlet-name>CalendarController</servlet-name>
+ 		<url-pattern>*.cal</url-pattern> <!-- 주소창의 경로가 *.bo이면 BoardController 클래스를 실행 -->
+ 	</servlet-mapping>
+   
+   <servlet>
+		<servlet-name>HugiController</servlet-name>
+		<servlet-class>mvc.controller.HugiController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>HugiController</servlet-name>
+		<url-pattern>*.hg</url-pattern> <!-- 주소창의 경로가 *.hg이면 HugiController 클래스를 실행 -->
+	</servlet-mapping>
+	
+	<servlet>
+		<servlet-name>BuildController</servlet-name>
+		<servlet-class>mvc.controller.BuildController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>BuildController</servlet-name>
+		<url-pattern>*.bu</url-pattern> <!-- 주소창의 경로가 *.hg이면 HugiController 클래스를 실행 -->
+	</servlet-mapping>
+ 	
+ 	<session-config>
+ 		<session-timeout>600</session-timeout>
+ 		<tracking-mode>COOKIE</tracking-mode>
+ 	</session-config>
+</web-app>

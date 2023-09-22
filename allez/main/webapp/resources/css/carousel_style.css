@@ -1,0 +1,15 @@
+.carousel button{
+	border:none;
+	opacity:0;
+}
+.carousel-control-next, .carousel-control-prev{
+	background-color : transparent;
+}
+
+
+@media screen and (max-width: 1440px) {
+	.carousel-item img{
+		height: 425px;
+	}
+	
+}

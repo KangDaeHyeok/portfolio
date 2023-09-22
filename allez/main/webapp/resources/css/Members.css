@@ -1,0 +1,253 @@
+
+
+body {
+	overflow-x: hidden;
+}
+
+/*메인 첫 페이지*/
+.top {
+	width: 100%;
+}
+
+.members-title h1 {
+	position: relative;
+	top: -200px;
+	font-weight: bold;
+	color: white;
+	left: 50px;
+}
+
+/*메인 페이지 아래 작은 네브*/
+
+
+.list {
+	box-shadow: 5px 5px 5px 0px #E4E4E4;
+	background-color: white;
+	width: 100%;
+	height: 80px;
+	line-height: center;
+	margin-top: -45px;
+}
+
+.list li {
+	/*border:1px solid red;*/
+	float: left;
+	list-style: none;
+	padding: 10px;
+	font-size: 30px;
+}
+
+.list li a {
+	font-size: 20px;
+	color: black;
+	padding: 10px;
+}
+
+/*기아 멤버스 포인트 section ---------------------------------------------------*/
+
+
+#point-txt p a {
+	font-weight: bold;
+	color: black;
+}
+
+#point-txt p, .care-txt p {
+	font-size: 19px;
+}
+
+/*차량케어 서비스 section -------------------------------------------------------*/
+#car-care {
+	margin-top: 2%;
+}
+
+#care-txt {
+	text-align: center;
+}
+
+#care-txt a {
+	font-weight: bold;
+	color: black;
+	font-size: 18px;
+}
+
+/*스마트 카 라이프 section ------------------------------------------------------*/
+#smart-car {
+	margin-top: 15%;
+}
+
+/*--------------하단의 박스들------------*/
+#lower_boxes .card-body {
+	margin-left: 2%;
+}
+
+#lower_boxes .card {
+	background-color: #f8f8f8;
+}
+
+#lower_boxes .card:hover {
+	background-color: #343a40;
+	color: white;
+	transition: 0.5s;
+}
+
+#lower_boxes .card:hover span {
+	color: white;
+}
+
+#lower_boxes .card:hover .btn {
+	background-color: white;
+	color: black;
+}
+
+.card-title .material-symbols-outlined {
+	font-size: 40px;
+	color: black;
+}
+
+
+
+
+/* 메뉴 */
+/*------영상 위에 얹은 네비게이션 바------*/
+.nav {
+	position: absolute;
+	top: 3%;
+	margin-left: 4%;
+	z-index: 9999;
+}
+
+.nav li a {
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.nav li a img {
+	width: 80px;
+	height: 50px;
+}
+
+/*-------중앙 로고(홈 버튼)----------*/
+.logo {
+	position: absolute;
+	top: 3%;
+	margin-left: 50%;
+}
+
+.logo img {
+	width: 4.5em;
+	height: 2.5em;
+}
+
+/*------우측 상단 로그인 & 게시판 버튼------*/
+.login {
+	position: absolute;
+	top: 3%;
+	right: 4%;
+}
+
+.login li {
+	text-decoration: none;
+	list-style: none;
+	float: left;
+}
+
+.login li a {
+	color: white;
+	font-size: 22px;
+	font-weight: bold;
+}
+
+.dropdown-menu {
+	position: relative;
+	top: 72px;
+	background-color: #323233;
+}
+
+.dropdown-menu a {
+	font-size: 17px !important;
+}
+
+.dropdown-item:focus, .dropdown-item:hover {
+	background-color: transparent;
+	color: gold;
+}
+
+.dropdown-item {
+	color: white;
+}
+
+/* ----- 모바일 네비 ------ */
+.mobileNav {
+	display: none;
+}
+
+.adminNav{
+	justify-content : normal;
+}
+
+
+
+
+
+
+
+/*미디어 쿼리--------------------------------------------------------------*/
+@media screen and (max-width: 1650px) {
+	.top {
+		height: 520px;
+	}
+}
+
+
+
+@media screen and (max-width: 1200px) {
+	
+	.mobile-logo {
+		position: absolute;
+		top: 3%;
+		margin-left: 43%;
+	}
+	.mobile-logo img {
+		width: 4em;
+		height: 2em;
+	}
+}
+
+@media screen and (max-width: 950px) {
+	.nav, .login, .logo {
+		display: none;
+	}
+	
+	/* ----- 모바일 네비 ------ */
+	.mobileNav {
+		display: block;
+		position: absolute;
+		top: 3%;
+		width: 100%;
+	}
+	.mobileNav .btn_ham {
+		position: absolute;
+		right: 3%;
+	}
+	.navbar-light .navbar-toggler {
+		background-color: white;
+	}
+	.mobileNav .navbar-nav li a {
+		font-size: 22px;
+		font-weight: bold;
+	}
+	.navbar-light .navbar-nav .nav-link {
+		color: white;
+	}
+	.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover
+		{
+		color: gold;
+	}
+	
+	.members-title{
+		visibility:hidden;
+	}
+	
+	
+}

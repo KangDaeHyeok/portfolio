@@ -1,0 +1,189 @@
+body {
+	overflow-x: hidden;
+}
+
+.cs_main {
+	position: relative;
+}
+
+.cs_main .cs_main_info {
+	position: absolute;
+	bottom: 50px;
+	left: 2%;
+}
+
+.sticky-top {
+	top: 0px;
+}
+
+.color_list li {
+	cursor: pointer;
+	float: left;
+	list-style: none;
+}
+
+.color_list li img {
+	width: 30px;
+	margin-right: 5px;
+}
+
+.color_list li:last-child img {
+	margin-right: 0;
+}
+
+.in_out_btn {
+	margin: 0 auto;
+	width: 280px;
+	height: 65px;
+	border: 1px solid white;
+	border-radius: 50px;
+	top: 100px;
+	padding-top: 6px;
+}
+
+.in_out_btn button {
+	font-weight: bold;
+	background-color: white;
+	width: 120px;
+	height: 50px;
+	border-radius: 50px;
+	z-index: 5;
+}
+
+.img_bg {
+	width: 100%;
+	height: 620px;
+	background-color: #c9c9cb;
+	z-index: -5;
+	top: -65px;
+}
+
+.cs_car_image {
+	top: -620px;
+}
+
+.cs_car_image img {
+	top: 125px;
+}
+
+.color_parent {
+	top: -500px;
+}
+
+.cs_in_list {
+	display: none;
+}
+
+.sticky-top {
+	width: 100%;
+	height: 80px;
+	background-color: white;
+}
+
+.thumbnail_parent {
+	top: -300px;
+}
+
+.thumbnail {
+	border: 1px solid lightgrey;
+	padding: 20px 20px 50px 20px;
+}
+
+#car_data {
+	position: relative;
+	top: -200px;
+}
+
+.carousel-item img {
+	margin: 0 auto;
+}
+
+.carousel-indicators li {
+	background-color: black !important;
+}
+
+#car_gallery img, #avante_gallery img {
+	transition: all 0.5s linear;
+}
+
+#car_gallery img:hover, #avante_gallery img:hover{
+	transform: scale(1.1);
+}
+
+.btn_parent {
+	top: 95px;
+	width: 97px;
+	height: 97px;
+	left: 50%;
+	margin-left: -48.5px;
+}
+
+.btn_parent a img {
+	opacity: 0.9;
+}
+
+#avante_data {
+	top: 50px;
+}
+
+#avante_gallery {
+	top: 600px;
+}
+
+/*1)laptop컴퓨터용
+		디바이스 장치가 최소 1200일 때=> 모니터 크기가 1200px이상일 때*/
+@media screen and (min-width: 1200px) {
+}
+/*2)laptop이하일 때:  타블렛 & 스마트폰용*/
+@media screen and (max-width: 1199px) {
+	.img_bg {
+		height: 550px;
+	}
+	.cs_car_image {
+		top: -500px;
+	}
+	.color_parent {
+		top: -400px;
+	}
+	#avante_gallery {
+		top: 400px;
+	}
+}
+
+/*3)타블렛일때만의 스타일*/
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+	.img_bg {
+		height: 440px;
+	}
+	.cs_car_image {
+		top: -470px;
+	}
+	.color_parent {
+		top: -350px;
+	}
+	#avante_gallery {
+		top: 350px;
+	}
+}
+/*4)스마트폰일때만의 스타일*/
+@media screen and (max-width: 767px) {
+	.img_bg {
+		height: 350px;
+	}
+	.cs_car_image {
+		top: -360px;
+	}
+	.color_parent {
+		top: -250px;
+	}
+	.thumbnail_parent {
+		top: -150px;
+	}
+	#car_data {
+		position: relative;
+		top: -100px;
+	}
+	#avante_gallery {
+		top: 200px;
+	}
+}
