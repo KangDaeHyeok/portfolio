@@ -20,7 +20,7 @@
 2) VolleyballClub <br>
 - 프로젝트 소개 : 한국도로공사 하이패스 배구단 사이트 <br>
 - server port : 8090 사용 <br>
-- 개발 환경 : Java, Spring(MyBatis, Lombok), Java Script, jQuery, AJAX, JSP, Html, CSS, Oracle, Apache Tomcat <br>
+- 개발 환경 : Java, Spring(MyBatis, Lombok), Java Script, jQuery, AJAX, JSP, Html, CSS, Oracle, KaKao 우편번호 API, Apache Tomcat <br>
 - 개발 기간 : 12일 <br>
 - 주요 기능 <br>
   -- 회원가입 및 탈퇴 <br>
