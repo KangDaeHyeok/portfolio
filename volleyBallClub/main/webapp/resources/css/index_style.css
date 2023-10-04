@@ -281,7 +281,7 @@ nav#gnb .right a:nth-child(4){
 	right: 42px;
 	z-index: 5;
 	background: url(../images/chevron_right.png) no-repeat;
-	-size: contain;
+	background-size: contain;
 	width: 30px;
 	height: 40px;
 }
@@ -316,7 +316,7 @@ nav#gnb .right a:nth-child(4){
 }
 #carousel div.carousel_btn ul.btn li:hover,
 #carousel div.carousel_btn ul.btn li.active{
-	-color:white ;
+	background-color:white ;
 	opacity: 100%;
 }
 
@@ -3046,9 +3046,7 @@ section#info>div:nth-of-type(2) .p_wrapper{
 
 
 /*nav#lnb style*/
-nav#lnb{
 
-}
 nav#lnb,
 nav#lnb ul{
 	width: 455px;
