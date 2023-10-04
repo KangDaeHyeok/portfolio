@@ -8,8 +8,8 @@ $(function(){
 	var mobhamBtnL = $(".mobile_left_hambergerBtn");
 
 	var carousel_img = $(".carousel_center li");
-	var carouselBtn_L = $(".carousel_left");
-	var carouselBtn_R = $(".carousel_right");
+	var carouselBtn_L = $(".carousel_left a");
+	var carouselBtn_R = $(".carousel_right a");
 	var carouselBtn_C = $(".carousel_btn .btn li"); 
 
 	var current = 0;
