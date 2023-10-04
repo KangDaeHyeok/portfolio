@@ -307,7 +307,7 @@ nav#gnb .right a:nth-child(4){
 #carousel div.carousel_btn ul.btn li{
 	width: 33px;
 	height: 2px;
-	-color:white;
+	background-color:white;
 	opacity: 50%;
 	float: left;
 	text-indent: -9999px;
