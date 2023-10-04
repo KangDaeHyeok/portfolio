@@ -20,6 +20,9 @@
 	#mNav a:hover{
 		font-weight:bold;
 	}
+	body{
+		overflow-x:hidden;
+	}
 </style>
 <% 
 request.setCharacterEncoding("utf-8");
