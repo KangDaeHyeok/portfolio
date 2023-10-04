@@ -31,6 +31,8 @@ document.addEventListener('DOMContentLoaded', function() {
 	if(month<10) month = "0"+month;
 	
 	var date = today.getDate();
+	if(date<10) date = "0"+date;
+	
 	var thisDay = year+"-"+month+"-"+date;
 	
     var calendarEl = document.getElementById('calendar');
