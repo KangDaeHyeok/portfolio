@@ -178,7 +178,7 @@
 					return false;
 				}
 				
-				var secret_form = $("#secret_form");
+				var secret_form = $(this).parent();
 				// 사용자가 설정한 비밀번호
 				var secret_num = $(this).siblings().val();
 				
